@@ -1,0 +1,12 @@
+import sys
+import math
+
+text = input()
+
+i = 0
+for c in text:
+    if c.isalpha():
+        print(end=chr((ord(c)-ord('Aa'[c.islower()])+i)%26 + ord('Aa'[c.islower()])))        
+    else:
+        print(end=c)
+    i += 1
